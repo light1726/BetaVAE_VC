@@ -5,7 +5,7 @@ This repo contains code for paper "Disentangled Speech Representation Learning f
 
 #### 0. Setup Conda Environment
 ```bash
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate betavae-vc-env
 ```
 
