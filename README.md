@@ -27,9 +27,11 @@ CUDA_VISIBLE_DEVICES=0 TF_FORCE_GPU_ALLOW_GROWTH=true python train.py --out_dir 
 #### 3. Inference
 ```bash
 # inference from mels
+# test-mels.txt contains list of paths for mel-spectrograms with *.npy format, one path per line
 CUDA_VISIBLE_DEVICES=0 TF_FORCE_GPU_ALLOW_GROWTH=true python inference-from-mel.py --ckpt_path ./outputs/models/ckpt-500 --test_dir outputs/tests --src_mels test-mels.txt --ref_mels test-mels.txt
 
 # inference from wavs
+# test-wavs.txt contains list of paths for speech with *.wav format, one path per line
 CUDA_VISIBLE_DEVICES=0 TF_FORCE_GPU_ALLOW_GROWTH=true python inference-from-wav.py --ckpt_path ./outputs/models/ckpt-500 --test_dir outputs/tests --src_wavs test-wavs.txt --ref_wavs test-wavs.txt
 ```
 
