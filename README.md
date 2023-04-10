@@ -40,9 +40,10 @@ CUDA_VISIBLE_DEVICES=0 TF_FORCE_GPU_ALLOW_GROWTH=true python feature_extraction.
 
 #### 5. EER computation based on the extracted latents
 ```bash
-# compute EER
+# compute EER using content embeddings
 python tests/compute_eer.py --data_dir ./outputs/features/EN --mode content
-python tests/compute_eer.py --data_dir ./outputs/features/EN --mode content
+# compute EER using speaker embeddings
+python tests/compute_eer.py --data_dir ./outputs/features/EN --mode spk
 ```
 
 ### Cite this work
